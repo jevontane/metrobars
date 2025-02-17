@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrobars Metronome</title>
+  <script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Metrobars Metronome</h1>
+    <div class="display">
+      <div class="tempo-display">
+        <span>Tempo: </span><span id="tempoValue">120</span> BPM
+      </div>
+      <div class="bars-display">
+        <span>Bar Playing: </span><span id="barsCount">1</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">▶</button>
+      <button id="pauseBtn">⏸</button>
+      <button id="stopBtn">⏹</button>
+    </div>
+
+    <div class="settings">
+      <div class="control-group">
+        <label for="tempoSlider">Adjust Tempo:</label>
+        <input type="range" id="tempoSlider" min="40" max="240" value="120">
+      </div>
+      <div class="control-group">
+        <label for="volumeSlider">Volume:</label>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+      </div>
+      <div class="control-group">
+        <button id="tapBtn">Tap Tempo</button>
+      </div>
+      <div class="control-group">
+        <label for="timeSignatureSelect">Time Signature:</label>
+        <select id="timeSignatureSelect">
+          <option value="3/4">3/4</option>
+          <option value="4/4" selected>4/4</option>
+          <option value="5/4">5/4</option>
+          <option value="6/8">6/8</option>
+          <option value="9/8">9/8</option>
+          <option value="15/8">15/8</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
